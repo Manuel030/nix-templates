@@ -1,6 +1,6 @@
 # nix-templates
 
-Initialize development environments for `some` languages.
+Initialize minimalistic development environments for `some` languages and take it from there.
 
 For example, 
 
