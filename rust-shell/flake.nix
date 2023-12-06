@@ -13,8 +13,8 @@
         overlays = [ 
             (import rust-overlay) 
             (self: super: {
-                rustToolchain = super.rust-bin.stable.latest.default;
-                })
+                rustToolchain = nixpkgs.rust-bin.selectLatestNightlyWith
+                  (toolchain: toolchain.default.override { extensions = [ "rust-src" "rust-analyzer" ]; });                })
             ];
         pkgs = import nixpkgs {
           inherit system overlays;
